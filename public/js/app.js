@@ -1,6 +1,4 @@
 //client
-console.log("client!");
-const fetchDataWeather = (address) => {};
 
 const weatherForm = document.querySelector("form");
 const inputAddress = document.querySelector("input");
@@ -20,7 +18,6 @@ weatherForm.addEventListener("submit", (e) => {
       } else {
         p1.textContent = data.location;
         p2.textContent = data.forecast + " celsius";
-        console.log(data);
       }
     });
   });
