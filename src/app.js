@@ -1,7 +1,10 @@
 const path = require("path");
 const express = require("express");
 const hbs = require("hbs");
+
 const app = express();
+const port = process.env.PORT || 3000;
+
 const geoCode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 const { response } = require("express");
@@ -70,6 +73,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("port 3000 on the air");
+app.listen(port, () => {
+  console.log(`port ${port} on the air`);
 });
